@@ -27,12 +27,14 @@ time, mark, audio, video {
     --dark-blue: #0f233f;
     --light-blue: #b5ddf1;
     --orange: #f47523;
+    --selected-orange: #ef833b;
+    --hover-orange: #fbb98d;
 
     --footer-height: calc(1.2*var(--rvv));
     --header-height: 15vh;
     --header-LR-padding: 30px;
     --header-TB-padding: 10px;
-    --logo: calc(var(--rvv));
+    --logo: 40px;
 }
 
 @font-face {
@@ -98,7 +100,26 @@ nav {
 }
 
 .nav-link {
+    cursor: pointer;
     background-color: var(--light-blue);
+    width: 110px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    border: 0.75px solid var(--dark-blue)
+}
+
+
+
+.nav-link:hover:not(.selected-nav) {
+    background-color: var(--hover-orange);
+}
+
+.selected-nav {
+    background-color: var(--selected-orange);
 }
 
 .social-links {
@@ -150,7 +171,7 @@ footer {
 }
 
 /* desktop rules: */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 1000px) {
 
    
 
