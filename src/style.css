@@ -28,8 +28,9 @@ time, mark, audio, video {
     --light-blue: #b5ddf1;
     --orange: #f47523;
 
+    --header-blue: #0f233f5a;
     --blue-text: #0a182b;
-    --blue-text-svg-filter: invert(7%) sepia(32%) saturate(2465%) hue-rotate(189deg) brightness(93%) contrast(96%);
+    --blue-text-svg-filter: invert(86%) sepia(15%) saturate(477%) hue-rotate(159deg) brightness(97%) contrast(96%);
     --selected-orange: #ef833b;
     --hover-orange: #fbb98d;
 
@@ -67,6 +68,7 @@ body {
 }
 
 header {
+    background-color: var(--header-blue);
     height: var(--header-height);
     padding: var(--header-TB-padding) var(--header-LR-padding) 0 var(--header-LR-padding);
     border-bottom: 1px solid black;
@@ -81,10 +83,11 @@ header {
 .logo-container {
     grid-area: logo;
     height: var(--header-height);
+    position: relative;
 }
 
 .logo-img {
-    height: calc(var(--header-height) - var(--header-TB-padding));
+    height: 100%;
     width: auto;
 }
 
@@ -105,6 +108,7 @@ nav {
 
 .nav-link {
     font-size: 1.1rem;
+    font-weight: 350;
     cursor: pointer;
     background-color: var(--light-blue);
     width: 110px;
@@ -134,6 +138,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     list-style: none;
     margin: 5px 0;
 }
@@ -151,8 +156,12 @@ nav {
     text-align: center;
 }
 
-.mobile-nav-link.selected-nav {
+/* .mobile-nav-link.selected-nav {
     border: 0.75px solid var(--blue-text);
+} */
+
+.mobile-nav-link:hover:not(.selected-nav) {
+    background-color: var(--hover-orange);
 }
 
 .selected-nav {
@@ -160,6 +169,7 @@ nav {
 }
 
 .menu-text {
+    color: var(--light-blue);
     cursor: pointer;
     font-weight: 350;
     font-size: calc(0.5*var(--rvv));
