@@ -2,6 +2,11 @@ import '../style.css';
 import htmlBody from '../html/index.html';
 
 import renderMenu from './menu';
+import renderHome from './home';
+import renderAbout from './about';
+import renderIssues from './issues';
+import renderContribute from './contribute';
+import renderVoting from './voting';
 
 (function renderBody() {
     const body = document.querySelector('body');
@@ -18,15 +23,32 @@ import renderMenu from './menu';
 })();
 
 (function addInitialClickListeners() {
+
     // add click listener to fb icon:
     const fbIcon = document.querySelector('.fb-icon-container');
     fbIcon.addEventListener('click', sendToFacebook);
+
+    // add click listeners to menu tabs:
+    const homeTab = document.querySelector('.home-tab');
+    homeTab.addEventListener('click', renderHome);
+
+    const aboutTab = document.querySelector('.about-tab');
+    aboutTab.addEventListener('click', renderAbout);
+
+    const issuesTab = document.querySelector('.issues-tab');
+    issuesTab.addEventListener('click', renderIssues);
+
+    const contributeTab = document.querySelector('.contribute-tab');
+    contributeTab.addEventListener('click', renderContribute);
+
+    const votingTab = document.querySelector('.voting-tab');
+    votingTab.addEventListener('click', renderVoting);
+
     // add click listener to 'Menu' text & hamburger icon:
     const menuText = document.querySelector('.menu-text');
     const burger = document.querySelector('.hamburger-img');
     menuText.addEventListener('click', renderMenu);
     burger.addEventListener('click', renderMenu);
-        renderMenu();
 })();
 
 function sendToFacebook() {

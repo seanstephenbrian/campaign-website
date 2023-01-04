@@ -121,6 +121,14 @@ nav {
     background-color: var(--hover-orange);
 }
 
+.mobile-menu {
+    position: absolute;
+    top: calc(var(--header-height) + var(--header-TB-padding) + 1px);
+    width: 100vw;
+    background-color: var(--light-blue);
+    border-bottom: 1px solid black;
+}
+
 .mobile-nav-links {
     display: flex;
     flex-direction: column;
@@ -131,6 +139,7 @@ nav {
 }
 
 .mobile-nav-link {
+    cursor: pointer;
     padding: calc(0.5*var(--rvv));
     height: calc(var(--rvv));
     border-radius: 7px;
@@ -194,14 +203,6 @@ nav {
     cursor: pointer;
     height: 66%;
     width: 66%;
-}
-
-.menu {
-    position: absolute;
-    top: calc(var(--header-height) + var(--header-TB-padding) + 1px);
-    width: 100vw;
-    background-color: var(--light-blue);
-    border-bottom: 1px solid black;
 }
 
 main {
