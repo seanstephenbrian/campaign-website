@@ -22,6 +22,10 @@ time, mark, audio, video {
 :root {
     --rvv: calc(1rem + 1vh + 1vw);
 
+    --dark-blue: #0f233f;
+    --light-blue: #b5ddf1;
+    --orange: #f47523;
+
     --header-height: calc(3*var(--rvv));
     --header-padding: calc(var(--rvv));
     --logo: calc(var(--rvv));
@@ -38,6 +42,8 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    background: rgb(181,230,255);
+    background: radial-gradient(circle, rgba(181,230,255,0.8767123287671232) 0%, rgba(15,35,63,0.906392694063927) 100%, rgba(181,221,241,1) 100%);
 }
 
     body * {
@@ -55,11 +61,12 @@ header {
 }
 
 .logo-container {
-    width: calc(3*var(--rvv));
+    height: var(--header-height);
 }
 
 .logo-img {
-    width: 100%;
+    height: 100%;
+    width: auto;
 }
 
 nav {
