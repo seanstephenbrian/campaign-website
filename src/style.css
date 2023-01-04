@@ -125,21 +125,26 @@ nav {
 }
 
 .menu {
+    cursor: pointer;
     font-weight: 350;
+    font-size: calc(0.5*var(--rvv));
 }
 
 .hamburger {
     height: 100%;
+    width: fit-content;
+    margin-left: auto;
     grid-area: nav;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
 }
 
 .hamburger-img {
-    height: var(--logo);
-    width: var(--logo);
+    cursor: pointer;
+    margin-top: -5px;
+    height: calc(0.4*var(--header-height));
     filter: var(--blue-text-svg-filter);
 }
 
