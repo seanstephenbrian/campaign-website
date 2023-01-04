@@ -27,6 +27,9 @@ time, mark, audio, video {
     --dark-blue: #0f233f;
     --light-blue: #b5ddf1;
     --orange: #f47523;
+
+    --blue-text: #0a182b;
+    --blue-text-svg-filter: invert(7%) sepia(32%) saturate(2465%) hue-rotate(189deg) brightness(93%) contrast(96%);
     --selected-orange: #ef833b;
     --hover-orange: #fbb98d;
 
@@ -54,6 +57,7 @@ body {
 }
 
 body {
+    color: var(--blue-text);
     font-family: 'Josefin Sans', var(--font-fallback);
     font-weight: 400;
     display: flex;
@@ -112,14 +116,31 @@ nav {
     border: 0.75px solid var(--dark-blue)
 }
 
-
-
 .nav-link:hover:not(.selected-nav) {
     background-color: var(--hover-orange);
 }
 
 .selected-nav {
     background-color: var(--selected-orange);
+}
+
+.menu {
+    font-weight: 350;
+}
+
+.hamburger {
+    height: 100%;
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.hamburger-img {
+    height: var(--logo);
+    width: var(--logo);
+    filter: var(--blue-text-svg-filter);
 }
 
 .social-links {
@@ -173,10 +194,12 @@ footer {
 /* desktop rules: */
 @media screen and (min-width: 1000px) {
 
-   
-
     nav {
         display: block;
+    }
+
+    .hamburger {
+        display: none;
     }
 
     .fb-icon {
