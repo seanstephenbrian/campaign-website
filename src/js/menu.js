@@ -77,5 +77,6 @@ function checkForMobileMenu() {
 
 export {
     renderMenu,
+    closeMenu,
     checkForMobileMenu
 }
