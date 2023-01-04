@@ -2,12 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  entry: "./src/js/index.js",
+  mode: 'production',
+  entry: './src/js/index.js',
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: "John Martin for District 65 Board of Education",
+      minify: true,
     }),
   ],
   output: {
