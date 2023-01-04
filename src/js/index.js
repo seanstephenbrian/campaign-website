@@ -1,6 +1,8 @@
 import '../style.css';
 import htmlBody from '../html/index.html';
 
+import renderMenu from './menu';
+
 (function renderBody() {
     const body = document.querySelector('body');
     body.innerHTML = htmlBody;
@@ -15,10 +17,16 @@ import htmlBody from '../html/index.html';
     `;
 })();
 
-(function addHomeClickListeners() {
+(function addInitialClickListeners() {
     // add click listener to fb icon:
     const fbIcon = document.querySelector('.fb-icon-container');
     fbIcon.addEventListener('click', sendToFacebook);
+    // add click listener to 'Menu' text & hamburger icon:
+    const menuText = document.querySelector('.menu-text');
+    const burger = document.querySelector('.hamburger-img');
+    menuText.addEventListener('click', renderMenu);
+    burger.addEventListener('click', renderMenu);
+        renderMenu();
 })();
 
 function sendToFacebook() {
