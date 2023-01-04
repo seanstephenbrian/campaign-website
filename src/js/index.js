@@ -14,3 +14,13 @@ import htmlBody from '../html/index.html';
         <p>All rights reserved.</p>
     `;
 })();
+
+(function addHomeClickListeners() {
+    // add click listener to fb icon:
+    const fbIcon = document.querySelector('.fb-icon-container');
+    fbIcon.addEventListener('click', sendToFacebook);
+})();
+
+function sendToFacebook() {
+    window.open('https://www.facebook.com/people/John-Martin-for-District-65-Board-of-Education/100088939831896/', '_blank');
+}

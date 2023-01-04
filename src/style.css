@@ -179,6 +179,14 @@ footer {
         display: block;
     }
 
+    .fb-icon {
+        transition: transform 1s ease-in-out;
+    }
+
+    .fb-icon:hover {
+        transform: rotate(1440deg);
+    }
+
     /* header {
         justify-content: flex-start;
     }
