@@ -54,6 +54,14 @@ header {
     padding: 0 calc(var(--header-padding));
 }
 
+.logo-container {
+    width: calc(3*var(--rvv));
+}
+
+.logo-img {
+    width: 100%;
+}
+
 nav {
     position: relative;
     top: var(--header-height);
