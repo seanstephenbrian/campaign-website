@@ -20,15 +20,26 @@ time, mark, audio, video {
 }
 
 :root {
+    --font-fallback: 'Helvetica', 'Arial', sans-serif;
+
     --rvv: calc(1rem + 1vh + 1vw);
 
     --dark-blue: #0f233f;
     --light-blue: #b5ddf1;
     --orange: #f47523;
 
+    --footer-height: calc(1.2*var(--rvv));
     --header-height: calc(3*var(--rvv));
-    --header-padding: calc(var(--rvv));
+    --header-LR-padding: calc(var(--rvv));
+    --header-TB-padding: calc(0.3*var(--rvv));
     --logo: calc(var(--rvv));
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./fonts/josefin/josefin-regular.ttf') format("truetype supports variations"),
+         url('./fonts/josefin/josefin-regular.ttf') format("truetype-variations");
+    font-weight: 100 700;
 }
 
 html,
@@ -40,16 +51,13 @@ body {
 }
 
 body {
+    font-family: 'Josefin Sans', var(--font-fallback);
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     background: rgb(181,230,255);
-    background: radial-gradient(circle, rgba(181,230,255,0.8767123287671232) 0%, rgba(15,35,63,0.906392694063927) 100%, rgba(181,221,241,1) 100%);
+    background: radial-gradient(circle, rgba(181,230,255,0.8767123287671232) 0%, rgba(46,82,133,0.906392694063927) 100%, rgba(181,221,241,1) 100%);
 }
-
-    body * {
-        border: 1px solid blue;
-    }
-
 
 header {
     display: flex;
@@ -57,7 +65,8 @@ header {
     justify-content: space-between;
     position: relative;
     height: var(--header-height);
-    padding: 0 calc(var(--header-padding));
+    padding: var(--header-TB-padding) var(--header-LR-padding);
+    border-bottom: 1px solid black;
 }
 
 .logo-container {
@@ -71,7 +80,7 @@ header {
 
 nav {
     position: relative;
-    top: var(--header-height);
+    top: calc(var(--header-height) + var(--header-TB-padding));
     display: flex;
 }
 
@@ -83,8 +92,8 @@ nav {
 .social-links {
     height: 10px;
     position: absolute;
-    top: 0;
-    right: var(--header-padding);
+    top: var(--header-TB-padding);
+    right: var(--header-LR-padding);
 }
 
 .fb-icon-container {
@@ -108,7 +117,22 @@ main {
 
 .body-photo {
     width: 80%;
+    max-width: 800px;
     height: auto;
+}
+
+footer {
+    font-size: calc(0.5*var(--rvv));
+    font-weight: 325;
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: var(--header-TB-padding);
+    height: var(--footer-height);
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.3*var(--rvv));
+    justify-content: center;
+    align-items: center;
 }
 
 /* desktop rules: */
@@ -127,6 +151,10 @@ main {
         flex-direction: row;
         height: 50%;
         align-items: flex-end;
+    }
+
+    footer {
+        font-size: calc(0.4*var(--rvv));
     }
 
 }
