@@ -1,5 +1,7 @@
+import updateCurrentPage from "./current-page";
+
 const renderContribute = () => {
-    alert('render contribute');
+    updateCurrentPage('contribute');
 }
 
 export default renderContribute;

@@ -1,5 +1,7 @@
+import updateCurrentPage from "./current-page";
+
 const renderVoting = () => {
-    alert('render voting');
+    updateCurrentPage('voting');
 }
 
 export default renderVoting;

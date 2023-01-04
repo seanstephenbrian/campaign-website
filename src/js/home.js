@@ -1,5 +1,10 @@
+import homeMain from '../html/home.html';
+import updateCurrentPage from './current-page';
+
 const renderHome = () => {
-    alert('render home');
+    updateCurrentPage('home');
+    const main = document.querySelector('main');
+    main.innerHTML = homeMain;
 }
 
 export default renderHome;

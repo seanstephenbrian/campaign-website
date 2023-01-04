@@ -1,7 +1,9 @@
 import '../style.css';
 import htmlBody from '../html/index.html';
 
-import renderMenu from './menu';
+import { 
+    renderMenu,
+    checkForMobileMenu } from './menu';
 import renderHome from './home';
 import renderAbout from './about';
 import renderIssues from './issues';
@@ -22,7 +24,7 @@ import renderVoting from './voting';
     `;
 })();
 
-(function addInitialClickListeners() {
+(function addHeaderClickListeners() {
 
     // add click listener to fb icon:
     const fbIcon = document.querySelector('.fb-icon-container');
@@ -49,7 +51,12 @@ import renderVoting from './voting';
     const burger = document.querySelector('.hamburger-img');
     menuText.addEventListener('click', renderMenu);
     burger.addEventListener('click', renderMenu);
+
 })();
+
+renderHome();
+
+window.addEventListener('resize', checkForMobileMenu);
 
 function sendToFacebook() {
     window.open('https://www.facebook.com/people/John-Martin-for-District-65-Board-of-Education/100088939831896/', '_blank');

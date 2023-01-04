@@ -1,5 +1,7 @@
+import updateCurrentPage from "./current-page";
+
 const renderAbout = () => {
-    alert('render about');
+    updateCurrentPage('about');
 }
 
 export default renderAbout;

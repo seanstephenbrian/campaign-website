@@ -1,5 +1,7 @@
+import updateCurrentPage from "./current-page";
+
 const renderIssues = () => {
-    alert('render issues');
+    updateCurrentPage('issues');
 }
 
 export default renderIssues;
