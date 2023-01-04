@@ -23,6 +23,8 @@ time, mark, audio, video {
     --rvv: calc(1rem + 1vh + 1vw);
 
     --header-height: calc(3*var(--rvv));
+    --header-padding: calc(var(--rvv));
+    --logo: calc(var(--rvv));
 }
 
 html,
@@ -49,6 +51,7 @@ header {
     justify-content: space-between;
     position: relative;
     height: var(--header-height);
+    padding: 0 calc(var(--header-padding));
 }
 
 nav {
@@ -66,7 +69,20 @@ nav {
     height: 10px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: var(--header-padding);
+}
+
+.fb-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--logo);
+    width: var(--logo);
+}
+
+.fb-icon {
+    height: 66%;
+    width: 66%;
 }
 
 main {
