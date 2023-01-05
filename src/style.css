@@ -216,9 +216,11 @@ nav {
 }
 
 main {
+    margin: calc(0.5*var(--rvv)) calc(var(--rvv));
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: calc(0.3*var(--rvv));
 }
 
 .body-photo {
@@ -227,13 +229,32 @@ main {
     height: auto;
 }
 
+h1 {
+    font-size: calc(1.2*var(--rvv));
+    margin: calc(0.8*var(--rvv)) 0;
+}
+
+h2 {
+    font-size: calc(0.9*var(--rvv));
+    font-weight: 350;
+}
+
+p {
+    font-size: calc(0.6*var(--rvv));
+    font-weight: 350;
+    line-height: 150%;
+    margin-bottom: calc(0.8*var(--rvv));
+}
+
 footer {
+    color: var(--light-blue);
+    background-color: var(--header-blue);
     font-size: calc(0.4*var(--rvv));
     font-weight: 325;
     text-align: center;
     margin-top: auto;
     padding-bottom: var(--header-TB-padding);
-    height: var(--footer-height);
+    min-height: var(--footer-height);
     display: flex;
     flex-direction: column;
     gap: calc(0.3*var(--rvv));

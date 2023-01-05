@@ -54,7 +54,7 @@ import renderVoting from './voting';
 
 })();
 
-renderHome();
+renderAbout();
 
 window.addEventListener('resize', checkForMobileMenu);
 
