@@ -24,15 +24,20 @@ time, mark, audio, video {
 
     --rvv: calc(1rem + 1vh + 1vw);
 
+    --table-border-radius: 10px;
+
     --dark-blue: #0f233f;
     --light-blue: #b5ddf1;
     --orange: #f47523;
 
     --header-blue: #0f233f5a;
+    --table-blue: #0f233f3e;
     --blue-text: #0a182b;
+    --link-blue: #04449e;
     --blue-text-svg-filter: invert(86%) sepia(15%) saturate(477%) hue-rotate(159deg) brightness(97%) contrast(96%);
     --selected-orange: #ef833b;
     --hover-orange: #fbb98d;
+    --link-orange: #a54301;
     --footer-text: #b2d7e8;
 
     --footer-height: calc(1.2*var(--rvv));
@@ -108,12 +113,12 @@ nav {
 }
 
 .nav-links {
-    margin-left: 40px;
+    margin-left: 38px;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    gap: 40px;
+    gap: 35px;
     list-style: none;
 }
 
@@ -121,6 +126,7 @@ nav {
     font-size: 1.1rem;
     font-weight: 350;
     cursor: pointer;
+    padding: 0 0.2rem;
     background-color: var(--light-blue);
     width: 110px;
     height: 50px;
@@ -319,6 +325,72 @@ p {
 
 .embedded-form {
     align-self: center;
+}
+
+.inline-link {
+    cursor: pointer;
+    color: var(--link-blue);
+    text-decoration: underline;
+}
+
+.inline-link:hover {
+    font-style: italic;
+}
+
+.inline-link:visited {
+    color: var(--link-orange);
+}
+
+
+table {
+    background-color: var(--table-blue);
+    padding: 1px;
+    border-radius: var(--table-border-radius);
+    margin-bottom: calc(var(--rvv));
+    align-self: center;
+}
+
+table caption {
+    text-decoration: underline;
+    font-size: calc(0.7*var(--rvv));
+    margin-bottom: 4px;
+}
+
+th:first-child,
+td:first-child {
+    text-align: right;
+}
+
+th:last-child,
+td:last-child {
+    text-align: left;
+}
+
+th,
+td {
+    background-color: var(--light-blue);
+    padding: calc(0.5*var(--rvv)) calc(var(--rvv));
+    font-size: calc(0.5*var(--rvv));
+}
+
+th {
+    font-size: calc(0.65*var(--rvv));
+}
+
+#top-left {
+    border-radius: var(--table-border-radius) 0 0 0;
+}
+
+#top-right {
+    border-radius: 0 var(--table-border-radius) 0 0;
+}
+
+#bottom-left {
+    border-radius: 0 0 0 var(--table-border-radius);
+}
+
+#bottom-right {
+    border-radius: 0 0 var(--table-border-radius) 0;
 }
 
 footer {

@@ -62,7 +62,7 @@ import renderVoting from './voting';
 
 })();
 
-renderGetInvolved();
+renderVoting();
 
 window.addEventListener('resize', checkForMobileMenu);
 

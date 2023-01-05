@@ -20,6 +20,7 @@ const renderGetInvolved = () => {
     form.addEventListener('load', () => {
         if (justRendered === false) {
             form.remove();
+            window.removeEventListener('resize', resizeForm);
             const text = document.querySelector('.connect-text');
             text.textContent = 'Your response has been recorded. Thanks!';
         } else {
