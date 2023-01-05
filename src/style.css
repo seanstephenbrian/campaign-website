@@ -277,6 +277,40 @@ p {
     margin-bottom: calc(var(--rvv));
 }
 
+.involved-intro {
+    margin-bottom: calc(0.4*var(--rvv));
+}
+
+.involved-text {
+    margin: calc(0.1*var(--rvv)) 0;
+}
+
+.donate-button {
+    cursor: pointer;
+    font-size: calc(0.6*var(--rvv));
+    font-weight: 375;
+    margin: calc(0.5*var(--rvv)) 0;
+    background-color: var(--hover-orange);
+    padding: 20px;
+    border: 1px solid var(--dark-blue);
+    border-radius: 15px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.donate-text {
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+.embedded-form {
+    align-self: center;
+}
+
 footer {
     border-top: 1px solid var(--blue-text);
     color: var(--footer-text);
@@ -323,6 +357,14 @@ footer p {
 
     main {
         margin: 0 15vw;
+    }
+
+    .donate-button {
+        transition: transform 0.1s ease-in-out;
+    }
+
+    .donate-button:hover {
+        transform: scale(1.1);
     }
 
     .ssbbd:hover {
