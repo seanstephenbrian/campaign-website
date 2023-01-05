@@ -14,6 +14,10 @@ const renderMenu = () => {
     menu.innerHTML = menuHtml;
     document.body.appendChild(menu);
 
+    // reveal blur overlay:
+    const blur = document.querySelector('.blur-overlay');
+    blur.classList.remove('hide');
+
     // remove renderMenu click listeners from menu text & hamburger icon:
     const menuText = document.querySelector('.menu-text');
     menuText.removeEventListener('click', renderMenu);
@@ -66,6 +70,10 @@ function closeMenu() {
         menuText.addEventListener('click', renderMenu);
         burger.addEventListener('click', renderMenu);
     }
+
+    // remove the blur overlay:
+    const blur = document.querySelector('.blur-overlay');
+    blur.classList.add('hide');
 }
 
 function checkForMobileMenu() {
