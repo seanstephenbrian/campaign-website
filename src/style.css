@@ -393,6 +393,10 @@ th {
     border-radius: 0 0 var(--table-border-radius) 0;
 }
 
+.voting-final-p {
+    margin-bottom: calc(1.5*var(--rvv));
+}
+
 footer {
     border-top: 1px solid var(--blue-text);
     color: var(--footer-text);
