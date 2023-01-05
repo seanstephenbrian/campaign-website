@@ -88,11 +88,11 @@ header {
     padding: var(--header-TB-padding) var(--header-LR-padding) 0 var(--header-LR-padding);
     border-bottom: 1px solid var(--blue-text);
     display: grid;
-    grid-template-columns: 200px var(--logo) 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: calc(0.5*var(--header-height)) calc(0.5*var(--header-height));
     grid-template-areas:
-        "logo social ."
-        "logo . nav";
+        "logo ."
+        "logo nav";
 }
 
 .logo-container {
@@ -162,7 +162,7 @@ nav {
 }
 
 .mobile-nav-links:last-child {
-    margin-bottom: calc(0.8*var(--rvv));
+    margin-bottom: calc(0.3*var(--rvv));
 }
 
 .mobile-nav-link {
@@ -231,12 +231,9 @@ nav {
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
-    position: relative;
 }
 
 .fb-icon-container {
-    position: relative;
-    right: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,15 +256,40 @@ main {
     gap: calc(0.3*var(--rvv));
 }
 
-.body-photo {
-    width: 80%;
-    max-width: 800px;
+.home-header {
+    margin: calc(1*var(--rvv)) 0 calc(0.5*var(--rvv));
+}
+
+
+.home-photo {
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 100%;
     height: auto;
+}
+
+.home-p {
+    margin: calc(0.4*var(--rvv)) 0 0;
+}
+
+.get-involved {
+    text-decoration: underline;
+    align-self: center;
+}
+
+.home-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: calc(var(--rvv));
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     font-size: calc(1.2*var(--rvv));
-    margin: calc(1.2*var(--rvv)) 0 calc(0.9*var(--rvv));
+    margin: calc(1*var(--rvv)) 0 calc(0.9*var(--rvv));
 }
 
 h2 {
@@ -314,7 +336,7 @@ p {
     margin: calc(0.1*var(--rvv)) 0;
 }
 
-.donate-button {
+.button {
     cursor: pointer;
     font-size: calc(0.6*var(--rvv));
     font-weight: 375;
@@ -474,14 +496,15 @@ footer p {
     }
 
     main {
-        margin: 0 15vw;
+        margin: 0 15vw calc(var(--rvv));
     }
 
-    .donate-button {
+    .button {
         transition: transform 0.1s ease-in-out;
     }
 
-    .donate-button:hover {
+    .button:hover {
+        background-color: var(--selected-orange);
         transform: scale(1.1);
     }
 

@@ -16,7 +16,7 @@ import renderVoting from './voting';
 })();
 
 (function fillFooter() {
-    const footer = document.querySelector('footer');
+    const footer = document.querySelector('.copyright');
     const date = new Date();
     footer.innerHTML = `
         <p>© ${date.getFullYear()} John Martin for District 65 Board of Education</p>
@@ -62,7 +62,7 @@ import renderVoting from './voting';
 
 })();
 
-renderVoting();
+renderHome();
 
 window.addEventListener('resize', checkForMobileMenu);
 
