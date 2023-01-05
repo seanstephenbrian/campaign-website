@@ -2,7 +2,7 @@ import menuHtml from '../html/menu.html';
 import renderHome from './home';
 import renderAbout from './about';
 import renderIssues from './issues';
-import renderContribute from './contribute';
+import renderGetInvolved from './get-involved';
 import renderVoting from './voting';
 
 import CloseIcon from '../img/close.svg';
@@ -43,8 +43,8 @@ const renderMenu = () => {
     const issuesLink = document.querySelector('.issues-link');
     issuesLink.addEventListener('click', renderIssues);
 
-    const contributeLink = document.querySelector('.contribute-link');
-    contributeLink.addEventListener('click', renderContribute);
+    const getInvolvedLink = document.querySelector('.get-involved-link');
+    getInvolvedLink.addEventListener('click', renderGetInvolved);
 
     const votingLink = document.querySelector('.voting-link');
     votingLink.addEventListener('click', renderVoting);

@@ -7,7 +7,7 @@ import {
 import renderHome from './home';
 import renderAbout from './about';
 import renderIssues from './issues';
-import renderContribute from './contribute';
+import renderGetInvolved from './get-involved';
 import renderVoting from './voting';
 
 (function renderBody() {
@@ -44,8 +44,8 @@ import renderVoting from './voting';
     const issuesTab = document.querySelector('.issues-tab');
     issuesTab.addEventListener('click', renderIssues);
 
-    const contributeTab = document.querySelector('.contribute-tab');
-    contributeTab.addEventListener('click', renderContribute);
+    const getInvolvedTab = document.querySelector('.get-involved-tab');
+    getInvolvedTab.addEventListener('click', renderGetInvolved);
 
     const votingTab = document.querySelector('.voting-tab');
     votingTab.addEventListener('click', renderVoting);
@@ -62,7 +62,7 @@ import renderVoting from './voting';
 
 })();
 
-renderAbout();
+renderIssues();
 
 window.addEventListener('resize', checkForMobileMenu);
 
