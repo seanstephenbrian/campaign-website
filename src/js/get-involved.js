@@ -13,6 +13,19 @@ const renderGetInvolved = () => {
     window.addEventListener('resize', resizeForm);
 
     resizeForm();
+
+    let justRendered = true;
+
+    const form = document.querySelector('.embedded-form');
+    form.addEventListener('load', () => {
+        if (justRendered === false) {
+            form.remove();
+            const text = document.querySelector('.connect-text');
+            text.textContent = 'Your response has been recorded. Thanks!';
+        } else {
+            justRendered = false;
+        }
+    })
 }
 
 function resizeForm() {
@@ -24,16 +37,8 @@ function resizeForm() {
         form.width = '400';
     } else if (window.innerWidth >= 500 && window.innerWidth < 600) {
         form.width = '500';
-    } else if (window.innerWidth >= 600 && window.innerWidth < 700) {
-        form.width = '600';
-    } else if (window.innerWidth >= 700 && window.innerWidth < 800) {
-        form.width = '700';
-    } else if (window.innerWidth >= 800 && window.innerWidth < 900) {
-        form.width = '800';
-    } else if (window.innerWidth >= 900 && window.innerWidth < 1000) {
-        form.width = '900';
-    } else if (window.innerWidth >= 1000) {
-        form.width = '1000';
+    } else if (window.innerWidth >= 600) {
+        form.width = '640';
     }
 }
 

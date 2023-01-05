@@ -73,6 +73,10 @@ body {
     background: radial-gradient(circle, rgba(181,230,255,0.8767123287671232) 0%, rgba(46,82,133,0.906392694063927) 100%, rgba(181,221,241,1) 100%);
 }
 
+.hide {
+    display: none;
+}
+
 header {
     background-color: var(--header-blue);
     height: var(--header-height);
@@ -238,7 +242,7 @@ main {
 
 h1 {
     font-size: calc(1.2*var(--rvv));
-    margin: calc(0.8*var(--rvv)) 0;
+    margin: calc(1.2*var(--rvv)) 0 calc(0.9*var(--rvv));
 }
 
 h2 {
@@ -289,7 +293,7 @@ p {
     cursor: pointer;
     font-size: calc(0.6*var(--rvv));
     font-weight: 375;
-    margin: calc(0.5*var(--rvv)) 0;
+    margin: calc(0.2*var(--rvv)) 0 calc(0.7*var(--rvv)) 0;
     background-color: var(--hover-orange);
     padding: 20px;
     border: 1px solid var(--dark-blue);
@@ -305,6 +309,12 @@ p {
     position: relative;
     left: 1px;
     top: 1px;
+}
+
+.connect-text {
+    align-self: center;
+    text-decoration: underline;
+    margin-top: calc(0.8*var(--rvv));
 }
 
 .embedded-form {
