@@ -21,7 +21,11 @@ import renderVoting from './voting';
     footer.innerHTML = `
         <p>© ${date.getFullYear()} John Martin for District 65 Board of Education</p>
         <p>All rights reserved.</p>
+        <p>Website by <span class="ssbbd">ssbbd</span></p>
     `;
+    // add click listener to contact web designer:
+    const ssbbd = document.querySelector('.ssbbd');
+    ssbbd.addEventListener('click', sendToSsbbd);
 })();
 
 (function addHeaderClickListeners() {
@@ -46,6 +50,10 @@ import renderVoting from './voting';
     const votingTab = document.querySelector('.voting-tab');
     votingTab.addEventListener('click', renderVoting);
 
+    // renderHome if user clicks the yard sign logo:
+    const logo = document.querySelector('.logo-img');
+    logo.addEventListener('click', renderHome);
+
     // add click listener to 'Menu' text & hamburger icon:
     const menuText = document.querySelector('.menu-text');
     const burger = document.querySelector('.hamburger-img');
@@ -60,4 +68,8 @@ window.addEventListener('resize', checkForMobileMenu);
 
 function sendToFacebook() {
     window.open('https://www.facebook.com/people/John-Martin-for-District-65-Board-of-Education/100088939831896/', '_blank');
+}
+
+function sendToSsbbd() {
+    
 }
