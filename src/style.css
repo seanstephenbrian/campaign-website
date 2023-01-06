@@ -514,7 +514,12 @@ p {
 }
 
 .donate-link {
+    color: var(--blue-text);
     text-decoration: none;
+}
+
+.donate-link:visited {
+    color: var(--blue-text);
 }
 
 .donate-link-container {
@@ -701,7 +706,8 @@ footer p {
         -o-animation-fill-mode: forwards;
         font-style: italic;
         font-family: 'Helico';
-        text-stroke: 0.5px black;       
+        text-stroke: 0.5px black;   
+        -webkit-text-stroke: 0.5px black;    
     }
 
 }
