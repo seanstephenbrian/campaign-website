@@ -13,36 +13,32 @@ const renderIssues = (clickedBack) => {
     main.innerHTML = issuesMain;
     main.className = 'issues-main';
 
-    // add click listeners to expand the view of the 3 main sections:
-    const firstSection = document.querySelector('.first-issue-wrapper');
-    firstSection.addEventListener('click', () => {
-        // reveal the dropdown content:
-        const firstSectionDropdown = document.querySelector('.first-issue-dropdown');
-        firstSectionDropdown.classList.remove('hide');
-        // remove the 'click here' text:
-        const firstLearnMore = document.querySelector('.first-learn-more');
-        firstLearnMore.remove();
-    }, {once: true});
+    function enableExpandCollapse(section) {
+        const sectionDropdown = document.querySelector(`.${section}-issue-dropdown`);
+        const learnMore = document.querySelector(`.${section}-learn-more`);
 
-    const secondSection = document.querySelector('.second-issue-wrapper');
-    secondSection.addEventListener('click', () => {
-        // reveal the dropdown content:
-        const secondSectionDropdown = document.querySelector('.second-issue-dropdown');
-        secondSectionDropdown.classList.remove('hide');
-        // remove the 'click here' text:
-        const secondLearnMore = document.querySelector('.second-learn-more');
-        secondLearnMore.remove();
-    }, {once: true});
+        // add click listeners to expand the sections:
+        learnMore.addEventListener('click', () => {
+            // reveal the dropdown content:
+            sectionDropdown.classList.remove('hide');
+            // remove the 'click here' text:
+            learnMore.classList.add('hide');
+        });
 
-    const thirdSection = document.querySelector('.third-issue-wrapper');
-    thirdSection.addEventListener('click', () => {
-        // reveal the dropdown content:
-        const thirdSectionDropdown = document.querySelector('.third-issue-dropdown');
-        thirdSectionDropdown.classList.remove('hide');
-        // remove the 'click here' text:
-        const thirdLearnMore = document.querySelector('.third-learn-more');
-        thirdLearnMore.remove();
-    }, {once: true});
+        // add a listener to collapse the section:
+        const sectionCollapse = document.querySelector(`.${section}-collapse-icon`);
+        sectionCollapse.addEventListener('click', () => {
+            // hide the dropdown content:
+            sectionDropdown.classList.add('hide');
+            // show the 'click here' text:
+            learnMore.classList.remove('hide');
+        });
+    }
+
+    enableExpandCollapse('first');
+    enableExpandCollapse('second');
+    enableExpandCollapse('third');
+    
 }
 
 export default renderIssues;
