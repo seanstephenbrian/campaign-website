@@ -30,6 +30,12 @@ const renderHome = (clickedBack) => {
         window.scrollTo(0, 0);
     });
 
+    const getInvolvedText = document.querySelector('.get-involved');
+    getInvolvedText.addEventListener('click', () => {
+        renderGetInvolved();
+        window.scrollTo(0, 0);
+    });
+
     const prioritiesButton = document.querySelector('.priorities-button');
     prioritiesButton.addEventListener('click', () => {
         renderGetInvolved();

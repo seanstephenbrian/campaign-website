@@ -42,6 +42,7 @@ time, mark, audio, video {
     --link-orange: #a54301;
     --footer-text: #b2d7e8;
     --issue-bg: #b5ddf1;
+    --involved-bg: #b5ddf191;
 
     --footer-height: calc(1.2*var(--rvv));
     --header-height: 15vh;
@@ -327,7 +328,11 @@ main {
 }
 
 .home-header {
-    margin: calc(1*var(--rvv)) 0 calc(0.5*var(--rvv));
+    margin: calc(0.9*var(--rvv)) 0 calc(0.5*var(--rvv));
+}
+
+.home-subheader {
+    margin-bottom: calc(0.4*var(--rvv));
 }
 
 .home-header,
@@ -347,10 +352,30 @@ main {
     margin: calc(0.4*var(--rvv)) 0 0;
 }
 
+.get-involved-container {
+    align-self: center;
+    padding: calc(0.7*var(--rvv)) calc(0.4*var(--rvv)) calc(0.6*var(--rvv));
+    border-radius: 20px;
+    width: 95%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    border: 1px solid var(--blue-text);
+    background-color: var(--involved-bg);
+    margin-bottom: calc(0.8*var(--rvv));
+}
+
 .get-involved {
+    cursor: pointer;
     margin-top: calc(0.3*var(--rvv));
     text-decoration: underline;
     align-self: center;
+}
+
+.get-involved:hover {
+    font-style: italic;
 }
 
 .home-buttons {
