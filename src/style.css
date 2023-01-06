@@ -297,6 +297,11 @@ main {
     margin: calc(1*var(--rvv)) 0 calc(0.5*var(--rvv));
 }
 
+.home-header,
+.home-subheader {
+    align-self: center;
+    text-align: center;
+}
 
 .home-photo {
     border-radius: 15px;
@@ -310,6 +315,7 @@ main {
 }
 
 .get-involved {
+    margin-top: calc(0.3*var(--rvv));
     text-decoration: underline;
     align-self: center;
 }
