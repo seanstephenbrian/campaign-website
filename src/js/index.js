@@ -21,7 +21,7 @@ import renderVoting from './voting';
     footer.innerHTML = `
         <p>© ${date.getFullYear()} John Martin for District 65 Board of Education</p>
         <p>All rights reserved.</p>
-        <p>Website by <span class="ssbbd">ssbbd</span></p>
+        <p>Site design by <span class="ssbbd">ssbbd</span></p>
     `;
     // add click listener to contact web designer:
     const ssbbd = document.querySelector('.ssbbd');
@@ -62,7 +62,7 @@ import renderVoting from './voting';
 
 })();
 
-renderHome();
+renderIssues();
 
 window.addEventListener('resize', checkForMobileMenu);
 

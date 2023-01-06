@@ -39,6 +39,7 @@ time, mark, audio, video {
     --hover-orange: #fbb98d;
     --link-orange: #a54301;
     --footer-text: #b2d7e8;
+    --issue-bg: #b5ddf1;
 
     --footer-height: calc(1.2*var(--rvv));
     --header-height: 15vh;
@@ -135,7 +136,8 @@ nav {
     align-items: center;
     text-align: center;
     border-radius: 10px 10px 0 0;
-    border: 1px solid var(--dark-blue)
+    border: 1px solid var(--dark-blue);
+    border-bottom: none;
 }
 
 .nav-link:hover:not(.selected-nav) {
@@ -289,7 +291,7 @@ main {
 
 h1 {
     font-size: calc(1.2*var(--rvv));
-    margin: calc(1*var(--rvv)) 0 calc(0.9*var(--rvv));
+    margin: calc(1*var(--rvv)) 0 calc(0.5*var(--rvv));
 }
 
 h2 {
@@ -298,8 +300,9 @@ h2 {
 }
 
 h3 {
-    font-size: calc(0.6*var(--rvv));
-    text-decoration: underline;
+    font-size: calc(0.75*var(--rvv));
+    margin: calc(0.5*var(--rvv)) 0 calc(0.25*var(--rvv));
+    font-weight: 350;
 }
 
 p {
@@ -309,23 +312,34 @@ p {
     margin-bottom: calc(0.8*var(--rvv));
 }
 
+.issue-wrapper {
+    border: 1px solid var(--dark-blue);
+    border-radius: 15px;
+    background-color: var(--issue-bg);
+    padding: 0 calc(0.6*var(--rvv)) calc(0.4*var(--rvv));
+    margin-bottom: calc(var(--rvv));
+}
+
 .issue-description {
     margin-bottom: calc(0.2*var(--rvv));
 }
 
 .issue-heading {
-    margin-top: calc(0.8*var(--rvv));
+    margin: calc(0.8*var(--rvv)) 0 calc(0.3*var(--rvv));
 }
 
 .issues-list {
     font-size: calc(0.55*var(--rvv));
-    font-weight: 400;
+    font-weight: 350;
     line-height: 175%;
     margin: 0 0 0 calc(var(--rvv));
 }
 
-.final-list {
-    margin-bottom: calc(var(--rvv));
+.learn-more {
+    color: var(--orange);
+    margin: calc(0.2*var(--rvv)) 0;
+    text-align: right;
+    font-size: calc(0.8*var(--rvv));
 }
 
 .involved-intro {
