@@ -5,6 +5,7 @@ import renderAbout from './about';
 import renderIssues from './issues';
 import { renderGetInvolved } from './get-involved';
 import renderVoting from './voting';
+import sendToDonate from './donate';
 
 const renderHome = (clickedBack) => {
     updateCurrentPage('home', clickedBack);
@@ -30,7 +31,8 @@ const renderHome = (clickedBack) => {
         window.scrollTo(0, 0);
     });
 
-    // CLICK LISTENER FOR DONATE BUTTON WILL GO HERE
+    const donateButton = document.querySelector('.donate-button');
+    donateButton.addEventListener('click', sendToDonate);
 
     const prioritiesButton = document.querySelector('.priorities-button');
     prioritiesButton.addEventListener('click', () => {

@@ -9,7 +9,8 @@ import renderAbout from './about';
 import renderIssues from './issues';
 import { renderGetInvolved } from './get-involved';
 import renderVoting from './voting';
-import updateCurrentPage from './current-page';
+import checkForParams from './params';
+import sendToFacebook from './fb';
 
 (function renderBody() {
     const body = document.querySelector('body');
@@ -63,24 +64,6 @@ import updateCurrentPage from './current-page';
 
 })();
 
-function checkForParams(clickedBack) {
-    const params = new URLSearchParams(location.search);
-    const page = params.get('pg');
-    if (page === 'home') {
-        renderHome(clickedBack);
-    } else if (page === 'about') {
-        renderAbout(clickedBack);
-    } else if (page === 'get-involved') {
-        renderGetInvolved(clickedBack);
-    } else if (page === 'issues') {
-        renderIssues(clickedBack);
-    } else if (page === 'voting') {
-        renderVoting(clickedBack);
-    } else {
-        renderHome();
-    }
-}
-
 checkForParams();
 
 window.addEventListener('resize', checkForMobileMenu);
@@ -88,10 +71,6 @@ window.addEventListener('resize', checkForMobileMenu);
 window.addEventListener('popstate', () => {
     checkForParams(true);
 });
-
-function sendToFacebook() {
-    window.open('https://facebook.com/100088939831896/', '_blank');
-}
 
 function sendToSsbbd() {
     
