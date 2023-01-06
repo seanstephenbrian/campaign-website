@@ -1,6 +1,8 @@
 import '../style.css';
 import htmlBody from '../html/index.html';
 
+import OgImage from '../img/og-image.png';
+
 import { 
     renderMenu,
     checkForMobileMenu } from './menu';
@@ -11,6 +13,22 @@ import { renderGetInvolved } from './get-involved';
 import renderVoting from './voting';
 import checkForParams from './params';
 import sendToFacebook from './fb';
+
+(function addOgImageTags() {
+    const head = document.querySelector('head');
+    const tag = document.createElement('meta');
+    tag.setAttribute('property', 'og:image');
+    tag.setAttribute('content', OgImage);
+    head.appendChild(tag);
+    const tag2 = document.createElement('meta');
+    tag2.setAttribute('property', 'og:image:width');
+    tag2.setAttribute('content', '1200');
+    head.appendChild(tag2);
+    const tag3 = document.createElement('meta');
+    tag3.setAttribute('property', 'og:image:height');
+    tag3.setAttribute('content', '630');
+    head.appendChild(tag3);
+})();
 
 (function renderBody() {
     const body = document.querySelector('body');

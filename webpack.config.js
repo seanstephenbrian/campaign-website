@@ -10,6 +10,12 @@ module.exports = {
       title: "John Martin for District 65 Board of Education",
       minify: true,
       favicon: './src/img/favicon.png',
+      meta: {
+        'description': 'John Martin for District 65 Board of Education. Putting students first. Rebuilding trust. Re-committing to public education.',
+        'og:title': { property: 'og:title', content: 'John Martin for District 65 Board of Education'},
+        'og:url': { property: 'og:url', content: 'https://www.JohnMartin65.com'},
+        'og:type': { property: 'og:type', content: 'website'}
+      },
     }),
   ],
   output: {
