@@ -9,6 +9,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "John Martin for District 65 Board of Education",
       minify: true,
+      favicon: './src/img/favicon.png',
     }),
   ],
   output: {
