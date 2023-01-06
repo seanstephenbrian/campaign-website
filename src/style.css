@@ -60,21 +60,31 @@ time, mark, audio, video {
     src: url('./fonts/helico_centrica/helico-centrica-roman.ttf') format('truetype');
 }
 
-@keyframes slideInLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-}
-
-@keyframes fadeIn {
+@keyframes fade-in {
     0% { 
         opacity: 0; 
     }
     100% { 
         opacity: 1; 
+    }
+}
+
+@keyframes button-hover {
+    0% {
+        background-color: var(--hover-orange);
+    }
+    100% {
+        background-color: var(--selected-orange);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
     }
 }
 
@@ -118,11 +128,11 @@ header {
     grid-area: logo;
     height: var(--header-height);
     position: relative;
-    animation: 0.7s ease-in-out 0s 1 slideInLeft;
-    -webkit-animation: 0.7s ease-in-out 0s 1 slideInLeft;
-    -moz-animation: 0.7s ease-in-out 0s 1 slideInLeft;
-    -o-animation: 0.7s ease-in-out 0s 1 slideInLeft;
-    -ms-animation:  0.7s ease-in-out 0s 1 slideInLeft;
+    animation: 0.7s ease-in-out 0s slide-in;
+    -webkit-animation: 0.7s ease-in-out 0s slide-in;
+    -moz-animation: 0.7s ease-in-out 0s slide-in;
+    -o-animation: 0.7s ease-in-out 0s slide-in;
+    -ms-animation:  0.7s ease-in-out 0s slide-in;
 }
 
 .logo-img {
@@ -272,16 +282,12 @@ nav {
     width: 66%;
 }
 
-.home-main,
-.about-main,
-.issues-main,
-.get-involved-main,
-.voting-main {
-    animation: fadeIn 1s 0s 1 ease-in;
-    -webkit-animation: fadeIn 1s 0s 1 ease-in;
-    -moz-animation: fadeIn 1s 0s 1 ease-in;
-    -o-animation: fadeIn 1s 0s 1 ease-in;
-    -ms-animation: fadeIn 1s 0s 1 ease-in;
+main {
+    animation: 1s ease-in 0s fade-in;
+    -webkit-animation: 1s ease-in 0s fade-in;
+    -moz-animation: 1s ease-in 0s fade-in;
+    -o-animation: 1s ease-in 0s fade-in;
+    -ms-animation: 1s ease-in 0s fade-in;
 }
 
 main {
@@ -304,6 +310,11 @@ main {
 }
 
 .home-photo {
+    animation: 1s ease-in 1s fade-in;
+    -webkit-animation: 1s ease-in 0s fade-in;
+    -moz-animation: 1s ease-in 0s fade-in;
+    -o-animation: 1s ease-in 0s fade-in;
+    -ms-animation: 1s ease-in 0s fade-in;
     border-radius: 15px;
     border: 1px solid black;
     width: 100%;
@@ -554,14 +565,19 @@ footer p {
         margin: 0 15vw calc(var(--rvv));
     }
 
-    .button {
+    .button:hover {
+        animation: 0.2s ease-in-out 0s button-hover;
+        animation-fill-mode: forwards;
+    }
+
+    /* .button {
         transition: transform 0.1s ease-in-out;
     }
 
     .button:hover {
         background-color: var(--selected-orange);
         transform: scale(1.1);
-    }
+    } */
 
     .ssbbd:hover {
         font-style: italic;
