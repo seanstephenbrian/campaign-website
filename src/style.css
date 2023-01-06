@@ -425,6 +425,11 @@ p {
     cursor: pointer;
     height: 100%;
     filter: var(--dark-blue-svg-filter);
+    transition: transform 0.2s ease-in-out;
+}
+
+.collapse-icon:hover {
+    transform: scale(1.2);
 }
 
 .involved-intro {
@@ -455,6 +460,14 @@ p {
     position: relative;
     left: 1px;
     top: 1px;
+}
+
+.donate-link {
+    text-decoration: none;
+}
+
+.donate-link-container {
+    align-self: center;
 }
 
 .connect-text {
@@ -583,14 +596,6 @@ footer p {
 
     main {
         margin: 0 15vw calc(var(--rvv));
-    }
-
-    .collapse-icon {
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .collapse-icon:hover {
-        transform: scale(1.2);
     }
 
     .button:hover {

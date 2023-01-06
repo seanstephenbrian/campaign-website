@@ -1,7 +1,6 @@
 import updateCurrentPage from "./current-page";
 import { closeMenu } from "./menu";
 import getInvolvedMain from '../html/get-involved.html';
-import sendToDonate from "./donate";
 
 const renderGetInvolved = (clickedBack) => {
     updateCurrentPage('get-involved', clickedBack);
@@ -13,10 +12,6 @@ const renderGetInvolved = (clickedBack) => {
     prevMain.remove();
     main.innerHTML = getInvolvedMain;
     main.className = 'get-involved-main';
-
-    // add click listener to donate button;
-    const donateButton = document.querySelector('.donate-button');
-    donateButton.addEventListener('click', sendToDonate);
 
     // add an event listener to resize the iframe form:
     window.addEventListener('resize', resizeForm);
