@@ -8,6 +8,8 @@ const renderGetInvolved = () => {
 
     const main = document.querySelector('main');
     main.innerHTML = getInvolvedMain;
+    main.className = '';
+    main.className = 'get-involved-main';
 
     // add an event listener to resize the iframe form:
     window.addEventListener('resize', resizeForm);

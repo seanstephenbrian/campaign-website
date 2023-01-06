@@ -60,6 +60,24 @@ time, mark, audio, video {
     src: url('./fonts/helico_centrica/helico-centrica-roman.ttf') format('truetype');
 }
 
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+
 html,
 body {
     min-height: 100vh;
@@ -100,6 +118,11 @@ header {
     grid-area: logo;
     height: var(--header-height);
     position: relative;
+    animation: 0.7s ease-in-out 0s 1 slideInLeft;
+    -webkit-animation: 0.7s ease-in-out 0s 1 slideInLeft;
+    -moz-animation: 0.7s ease-in-out 0s 1 slideInLeft;
+    -o-animation: 0.7s ease-in-out 0s 1 slideInLeft;
+    -ms-animation:  0.7s ease-in-out 0s 1 slideInLeft;
 }
 
 .logo-img {
@@ -247,6 +270,18 @@ nav {
     cursor: pointer;
     height: 66%;
     width: 66%;
+}
+
+.home-main,
+.about-main,
+.issues-main,
+.get-involved-main,
+.voting-main {
+    animation: fadeIn 1s 0s 1 ease-in;
+    -webkit-animation: fadeIn 1s 0s 1 ease-in;
+    -moz-animation: fadeIn 1s 0s 1 ease-in;
+    -o-animation: fadeIn 1s 0s 1 ease-in;
+    -ms-animation: fadeIn 1s 0s 1 ease-in;
 }
 
 main {

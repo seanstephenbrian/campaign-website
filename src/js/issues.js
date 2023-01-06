@@ -8,6 +8,8 @@ const renderIssues = () => {
 
     const main = document.querySelector('main');
     main.innerHTML = issuesMain;
+    main.className = '';
+    main.className = 'issues-main';
 
     // add click listeners to expand the view of the 3 main sections:
     const firstSection = document.querySelector('.first-issue-wrapper');

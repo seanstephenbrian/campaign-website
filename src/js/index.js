@@ -62,9 +62,31 @@ import renderVoting from './voting';
 
 })();
 
-renderHome();
+function checkForParams() {
+    const params = new URLSearchParams(location.search);
+    const page = params.get('pg');
+    if (page === 'home') {
+        renderHome();
+    } else if (page === 'about') {
+        renderAbout();
+    } else if (page === 'get-involved') {
+        renderGetInvolved();
+    } else if (page === 'issues') {
+        renderIssues();
+    } else if (page === 'voting') {
+        renderVoting();
+    } else {
+    renderHome();
+    }
+}
+
+checkForParams();
 
 window.addEventListener('resize', checkForMobileMenu);
+
+window.addEventListener('popstate', () => {
+    checkForParams();
+});
 
 function sendToFacebook() {
     window.open('https://www.facebook.com/people/John-Martin-for-District-65-Board-of-Education/100088939831896/', '_blank');

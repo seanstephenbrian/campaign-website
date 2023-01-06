@@ -1,4 +1,5 @@
 import { resizeForm } from "./get-involved";
+import updatePageState from "./page-state";
 
 const updateCurrentPage = (page) => {
     // save currentPage to localStorage:
@@ -6,6 +7,8 @@ const updateCurrentPage = (page) => {
     if (page !== 'get-involved') {
         window.removeEventListener('resize', resizeForm);
     }
+    // update search params:
+    updatePageState(page);
     // first clear the selected-nav class from all tabs:
     const navTabs = document.querySelectorAll('.nav-link');
     navTabs.forEach(tab => {

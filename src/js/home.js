@@ -12,6 +12,8 @@ const renderHome = () => {
     
     const main = document.querySelector('main');
     main.innerHTML = homeMain;
+    main.className = '';
+    main.className = 'home-main';
 
     // add click listeners to the homepage buttons:
     const aboutButton = document.querySelector('.about-button');

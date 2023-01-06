@@ -8,6 +8,8 @@ const renderVoting = () => {
 
     const main = document.querySelector('main');
     main.innerHTML = votingMain;
+    main.className = '';
+    main.className = 'voting-main';
 
 }
 

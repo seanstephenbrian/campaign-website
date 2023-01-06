@@ -8,6 +8,8 @@ const renderAbout = () => {
     
     const main = document.querySelector('main');
     main.innerHTML = aboutMain;
+    main.className = '';
+    main.className = 'about-main';
 }
 
 export default renderAbout;
