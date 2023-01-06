@@ -6,9 +6,11 @@ const renderGetInvolved = (clickedBack) => {
     updateCurrentPage('get-involved', clickedBack);
     closeMenu();
 
-    const main = document.querySelector('main');
+    const prevMain = document.querySelector('main');
+    const main = document.createElement('main');
+    prevMain.after(main);
+    prevMain.remove();
     main.innerHTML = getInvolvedMain;
-    main.className = '';
     main.className = 'get-involved-main';
 
     // add an event listener to resize the iframe form:

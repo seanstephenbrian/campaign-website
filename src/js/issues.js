@@ -6,9 +6,11 @@ const renderIssues = (clickedBack) => {
     updateCurrentPage('issues', clickedBack);
     closeMenu();
 
-    const main = document.querySelector('main');
+    const prevMain = document.querySelector('main');
+    const main = document.createElement('main');
+    prevMain.after(main);
+    prevMain.remove();
     main.innerHTML = issuesMain;
-    main.className = '';
     main.className = 'issues-main';
 
     // add click listeners to expand the view of the 3 main sections:

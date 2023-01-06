@@ -100,6 +100,15 @@ time, mark, audio, video {
     }
 }
 
+@keyframes tab-hover {
+    0% {
+        background-color: var(--light-blue);
+    }
+    100% {
+        background-color: var(--hover-orange);
+    }
+}
+
 html,
 body {
     min-height: 100vh;
@@ -186,6 +195,14 @@ nav {
 }
 
 .nav-link:hover:not(.selected-nav) {
+    animation: 0.18s linear 0s tab-hover;
+    -webkit-animation: 0.18s linear 0s tab-hover;
+    -moz-animation: 0.18s linear 0s tab-hover;
+    -o-animation: 0.18s linear 0s tab-hover;
+    -ms-animation: 0.18s linear 0s tab-hover;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
     background-color: var(--hover-orange);
 }
 
@@ -234,10 +251,6 @@ nav {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
-
-/* .mobile-nav-link.selected-nav {
-    border: 0.75px solid var(--blue-text);
-} */
 
 .mobile-nav-link:hover:not(.selected-nav) {
     background-color: var(--hover-orange);
@@ -322,11 +335,6 @@ main {
 }
 
 .home-photo {
-    animation: 1s ease-in 1s fade-in;
-    -webkit-animation: 1s ease-in 0s fade-in;
-    -moz-animation: 1s ease-in 0s fade-in;
-    -o-animation: 1s ease-in 0s fade-in;
-    -ms-animation: 1s ease-in 0s fade-in;
     border-radius: 15px;
     border: 1px solid black;
     width: 100%;
@@ -544,19 +552,6 @@ footer p {
 /* desktop rules: */
 @media screen and (min-width: 1000px) {
 
-    /* header {
-        grid-template-columns: 200px 1fr;
-        grid-template-rows: calc(0.5*var(--header-height)) calc(0.5*var(--header-height));
-        grid-template-areas:
-            "logo social"
-            "logo nav";
-    }
-
-    .social-links {
-        justify-content: flex-end;
-        align-items: flex-start;
-    } */
-
     nav {
         display: block;
     }
@@ -579,12 +574,24 @@ footer p {
 
     .button:hover {
         animation: 0.2s ease-in-out 0s button-hover;
+        -webkit-animation: 0.2s ease-in-out 0s button-hover;
+        -moz-animation: 0.2s ease-in-out 0s button-hover;
+        -o-animation: 0.2s ease-in-out 0s button-hover;
+        -ms-animation: 0.2s ease-in-out 0s button-hover;
         animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
     }
 
     .ssbbd:hover {
         animation: 0.1s ease-in-out 0s ssbbd-hover;
+        -webkit-animation: 0.1s ease-in-out 0s ssbbd-hover;
+        -moz-animation: 0.1s ease-in-out 0s ssbbd-hover;
+        -o-animation: 0.1s ease-in-out 0s ssbbd-hover;
+        -ms-animation: 0.1s ease-in-out 0s ssbbd-hover;
         animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
         font-style: italic;
         font-family: 'Helico';
         text-stroke: 0.5px black;       

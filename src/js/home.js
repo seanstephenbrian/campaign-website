@@ -10,9 +10,11 @@ const renderHome = (clickedBack) => {
     updateCurrentPage('home', clickedBack);
     closeMenu();
     
-    const main = document.querySelector('main');
+    const prevMain = document.querySelector('main');
+    const main = document.createElement('main');
+    prevMain.after(main);
+    prevMain.remove();
     main.innerHTML = homeMain;
-    main.className = '';
     main.className = 'home-main';
 
     // add click listeners to the homepage buttons:

@@ -90,7 +90,7 @@ window.addEventListener('popstate', () => {
 });
 
 function sendToFacebook() {
-    window.open('https://www.facebook.com/people/John-Martin-for-District-65-Board-of-Education/100088939831896/', '_blank');
+    window.open('https://facebook.com/100088939831896/', '_blank');
 }
 
 function sendToSsbbd() {

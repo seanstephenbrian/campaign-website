@@ -6,9 +6,11 @@ const renderVoting = (clickedBack) => {
     updateCurrentPage('voting', clickedBack);
     closeMenu();
 
-    const main = document.querySelector('main');
+    const prevMain = document.querySelector('main');
+    const main = document.createElement('main');
+    prevMain.after(main);
+    prevMain.remove();
     main.innerHTML = votingMain;
-    main.className = '';
     main.className = 'voting-main';
 
 }
