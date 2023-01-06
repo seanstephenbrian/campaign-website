@@ -532,6 +532,10 @@ p {
     position: relative;
 }
 
+.donate-button {
+    font-size: calc(0.7*var(--rvv));
+}
+
 .donate-text {
     position: relative;
     left: 1px;
