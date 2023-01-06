@@ -2,7 +2,7 @@ import menuHtml from '../html/menu.html';
 import renderHome from './home';
 import renderAbout from './about';
 import renderIssues from './issues';
-import renderGetInvolved from './get-involved';
+import { renderGetInvolved } from './get-involved';
 import renderVoting from './voting';
 
 import CloseIcon from '../img/close.svg';

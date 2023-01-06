@@ -135,7 +135,7 @@ nav {
     align-items: center;
     text-align: center;
     border-radius: 10px 10px 0 0;
-    /* border: 0.75px solid var(--dark-blue) */
+    border: 1px solid var(--dark-blue)
 }
 
 .nav-link:hover:not(.selected-nav) {
@@ -282,7 +282,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: calc(var(--rvv));
+    column-gap: calc(var(--rvv));
     justify-content: center;
     align-items: center;
 }

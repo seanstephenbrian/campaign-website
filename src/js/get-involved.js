@@ -43,4 +43,7 @@ function resizeForm() {
     }
 }
 
-export default renderGetInvolved;
+export {
+    renderGetInvolved,
+    resizeForm
+};

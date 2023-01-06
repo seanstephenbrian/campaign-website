@@ -1,6 +1,11 @@
+import { resizeForm } from "./get-involved";
+
 const updateCurrentPage = (page) => {
     // save currentPage to localStorage:
     localStorage.setItem('currentPage', page);
+    if (page !== 'get-involved') {
+        window.removeEventListener('resize', resizeForm);
+    }
     // first clear the selected-nav class from all tabs:
     const navTabs = document.querySelectorAll('.nav-link');
     navTabs.forEach(tab => {
