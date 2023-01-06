@@ -418,9 +418,11 @@ p {
 .collapse {
     display: flex;
     justify-content: flex-end;
+    height: calc(1.5*var(--rvv));
 }
 
 .collapse-icon {
+    height: 100%;
     filter: var(--dark-blue-svg-filter);
 }
 
