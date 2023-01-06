@@ -2,8 +2,8 @@ import updateCurrentPage from "./current-page";
 import { closeMenu } from "./menu";
 import getInvolvedMain from '../html/get-involved.html';
 
-const renderGetInvolved = () => {
-    updateCurrentPage('get-involved');
+const renderGetInvolved = (clickedBack) => {
+    updateCurrentPage('get-involved', clickedBack);
     closeMenu();
 
     const main = document.querySelector('main');

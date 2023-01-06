@@ -2,8 +2,8 @@ import updateCurrentPage from "./current-page";
 import { closeMenu } from "./menu";
 import votingMain from '../html/voting.html';
 
-const renderVoting = () => {
-    updateCurrentPage('voting');
+const renderVoting = (clickedBack) => {
+    updateCurrentPage('voting', clickedBack);
     closeMenu();
 
     const main = document.querySelector('main');

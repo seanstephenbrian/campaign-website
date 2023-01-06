@@ -9,6 +9,7 @@ import renderAbout from './about';
 import renderIssues from './issues';
 import { renderGetInvolved } from './get-involved';
 import renderVoting from './voting';
+import updateCurrentPage from './current-page';
 
 (function renderBody() {
     const body = document.querySelector('body');
@@ -62,21 +63,21 @@ import renderVoting from './voting';
 
 })();
 
-function checkForParams() {
+function checkForParams(clickedBack) {
     const params = new URLSearchParams(location.search);
     const page = params.get('pg');
     if (page === 'home') {
-        renderHome();
+        renderHome(clickedBack);
     } else if (page === 'about') {
-        renderAbout();
+        renderAbout(clickedBack);
     } else if (page === 'get-involved') {
-        renderGetInvolved();
+        renderGetInvolved(clickedBack);
     } else if (page === 'issues') {
-        renderIssues();
+        renderIssues(clickedBack);
     } else if (page === 'voting') {
-        renderVoting();
+        renderVoting(clickedBack);
     } else {
-    renderHome();
+        renderHome();
     }
 }
 
@@ -85,7 +86,7 @@ checkForParams();
 window.addEventListener('resize', checkForMobileMenu);
 
 window.addEventListener('popstate', () => {
-    checkForParams();
+    checkForParams(true);
 });
 
 function sendToFacebook() {

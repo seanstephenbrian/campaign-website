@@ -6,8 +6,8 @@ import renderIssues from './issues';
 import { renderGetInvolved } from './get-involved';
 import renderVoting from './voting';
 
-const renderHome = () => {
-    updateCurrentPage('home');
+const renderHome = (clickedBack) => {
+    updateCurrentPage('home', clickedBack);
     closeMenu();
     
     const main = document.querySelector('main');

@@ -2,8 +2,8 @@ import updateCurrentPage from "./current-page";
 import { closeMenu } from "./menu";
 import issuesMain from '../html/issues.html';
 
-const renderIssues = () => {
-    updateCurrentPage('issues');
+const renderIssues = (clickedBack) => {
+    updateCurrentPage('issues', clickedBack);
     closeMenu();
 
     const main = document.querySelector('main');
