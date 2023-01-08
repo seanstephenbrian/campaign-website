@@ -344,8 +344,10 @@ main {
 .home-photo {
     border-radius: 15px;
     border: 1px solid black;
-    width: 100%;
-    height: auto;
+    align-self: center;
+    width: auto;
+    max-width: 80%;
+    max-height: 800px;
 }
 
 .home-p {
