@@ -5,6 +5,9 @@ module.exports = {
   mode: 'production',
   entry: './src/js/index.js',
   devtool: 'inline-source-map',
+  optimization: {
+    minimize: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: "John Martin for District 65 Board of Education",
