@@ -534,8 +534,9 @@ p {
     position: relative;
 }
 
-.donate-button {
+.involved-donate-button {
     font-size: calc(0.7*var(--rvv));
+    margin-bottom: 0;
 }
 
 .donate-text {
@@ -555,6 +556,9 @@ p {
 
 .donate-link-container {
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .connect-text {
