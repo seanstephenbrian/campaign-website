@@ -91,5 +91,8 @@ window.addEventListener('popstate', () => {
 });
 
 function sendToSsbbd() {
-    
+    const newWindow = window.open('https://seanstephenbrian.github.io/ssbbd/', '_blank', 'noopener');
+    if (newWindow) {
+        newWindow.opener = null;
+    }
 }
