@@ -7,6 +7,7 @@ import renderVoting from './voting';
 
 import CloseIcon from '../img/close.svg';
 import HamburgerIcon from '../img/hamburger.svg';
+import renderContact from './contact';
 
 const renderMenu = () => {
     const menu = document.createElement('div');
@@ -52,6 +53,9 @@ const renderMenu = () => {
 
     const votingLink = document.querySelector('.voting-link');
     votingLink.addEventListener('click', renderVoting);
+
+    const contactLink = document.querySelector('.contact-link');
+    contactLink.addEventListener('click', renderContact);
 }
 
 function closeMenu() {

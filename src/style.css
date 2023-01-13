@@ -99,7 +99,7 @@ time, mark, audio, video {
         color: #1aff00ed; 
         text-shadow: 2px 2px rgba(255, 0, 0, 0.657);
         letter-spacing: 1px;
-        font-size: calc(0.8*var(--rvv));
+        font-size: calc(0.6*var(--rvv));
         -webkit-text-stroke: 0.5px black;
     }
 }
