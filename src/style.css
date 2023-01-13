@@ -672,6 +672,39 @@ th {
     margin-bottom: calc(1.5*var(--rvv));
 }
 
+.email-john,
+.more-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-john p,
+.more-info p {
+    align-self: flex-start;
+}
+
+.johns-email-link,
+.get-involved-button {
+    margin-top: -10px;
+}
+
+.johns-email-link {
+    text-decoration: none;
+    color: var(--blue-text);
+}
+
+.johns-email-link:visited {
+    color: var(--blue-text);
+}
+
+.more-info {
+    margin-top: 30px;
+}
+
+
 footer {
     border-top: 1px solid var(--blue-text);
     color: var(--footer-text);
@@ -704,11 +737,11 @@ footer .email {
 
 footer .email-link {
     color: var(--footer-text);
-    /* color: var(--footer-link-blue); */
+    text-decoration: underline;
 }
 
 .email-link:visited {
-    color: var(--link-orange);
+    color: var(--footer-text);
 }
 
 .ssbbd {

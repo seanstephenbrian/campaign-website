@@ -1,6 +1,7 @@
 import updateCurrentPage from './current-page';
 import { closeMenu } from './menu';
 import contactMain from '../html/contact.html';
+import { renderGetInvolved } from './get-involved';
 
 const renderContact = (clickedBack) => {
     updateCurrentPage('contact', clickedBack);
@@ -12,6 +13,10 @@ const renderContact = (clickedBack) => {
     prevMain.remove();
     main.innerHTML = contactMain;
     main.className = 'contact-main';
+
+    // add click listener to get involved button
+    const getInvolvedButton = document.querySelector('.get-involved-button');
+    getInvolvedButton.addEventListener('click', renderGetInvolved);
 }
 
 export default renderContact;
