@@ -11,6 +11,7 @@ import renderAbout from './about';
 import renderIssues from './issues';
 import { renderGetInvolved } from './get-involved';
 import renderVoting from './voting';
+import renderContact from './contact';
 import checkForParams from './params';
 import sendToFacebook from './fb';
 
@@ -69,6 +70,9 @@ import sendToFacebook from './fb';
 
     const votingTab = document.querySelector('.voting-tab');
     votingTab.addEventListener('click', renderVoting);
+
+    const contactTab = document.querySelector('.contact-tab');
+    contactTab.addEventListener('click', renderContact);
 
     // renderHome if user clicks the yard sign logo:
     const logo = document.querySelector('.logo-img');
