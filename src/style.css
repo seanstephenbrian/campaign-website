@@ -292,12 +292,14 @@ nav {
 .social-links {
     grid-area: social;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     height: 100%;
+    gap: calc(0.15*var(--rvv));
 }
 
-.fb-icon-container {
+.fb-icon-container,
+.insta-icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,7 +307,8 @@ nav {
     width: var(--logo);
 }
 
-.fb-icon {
+.fb-icon,
+.insta-icon {
     cursor: pointer;
     height: 66%;
     width: 66%;
@@ -769,6 +772,14 @@ footer .email-link {
 
     .fb-icon:hover {
         transform: rotate(1440deg);
+    }
+
+    .insta-icon {
+        transition: transform 1s ease-in-out;
+    }
+
+    .insta-icon:hover {
+        transform: rotate(-1200deg);
     }
 
     main {

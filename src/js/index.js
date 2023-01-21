@@ -14,6 +14,7 @@ import renderVoting from './voting';
 import renderContact from './contact';
 import checkForParams from './params';
 import sendToFacebook from './fb';
+import sendToInsta from './insta';
 
 (function addOgImageTags() {
     const head = document.querySelector('head');
@@ -44,17 +45,18 @@ import sendToFacebook from './fb';
         <p>All rights reserved.</p>
         <p>Site design by <span class="ssbbd">ssbbd</span></p>
     `;
+    // add click listener to fb icon:
+    const fbIcon = document.querySelector('.fb-icon-container');
+    fbIcon.addEventListener('click', sendToFacebook);
+    // add click listener to insta icon:
+    const instaIcon = document.querySelector('.insta-icon-container');
+    instaIcon.addEventListener('click', sendToInsta);
     // add click listener to contact web designer:
     const ssbbd = document.querySelector('.ssbbd');
     ssbbd.addEventListener('click', sendToSsbbd);
 })();
 
 (function addHeaderClickListeners() {
-
-    // add click listener to fb icon:
-    const fbIcon = document.querySelector('.fb-icon-container');
-    fbIcon.addEventListener('click', sendToFacebook);
-
     // add click listeners to menu tabs:
     const homeTab = document.querySelector('.home-tab');
     homeTab.addEventListener('click', renderHome);
