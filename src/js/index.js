@@ -41,7 +41,7 @@ import sendToInsta from './insta';
     const footer = document.querySelector('.copyright');
     const date = new Date();
     footer.innerHTML = `
-        <p>© ${date.getFullYear()} John Martin for District 65 Board of Education</p>
+        <p>© ${date.getFullYear()} Friends of John Martin</p>
         <p>All rights reserved.</p>
         <p>Site design by <span class="ssbbd">ssbbd</span></p>
     `;
