@@ -8,6 +8,7 @@ import renderVoting from './voting';
 import CloseIcon from '../img/close.svg';
 import HamburgerIcon from '../img/hamburger.svg';
 import renderContact from './contact';
+import renderSupporters from './supporters';
 
 const renderMenu = () => {
     const menu = document.createElement('div');
@@ -53,6 +54,9 @@ const renderMenu = () => {
 
     const votingLink = document.querySelector('.voting-link');
     votingLink.addEventListener('click', renderVoting);
+
+    const supportersLink = document.querySelector('.supporters-link');
+    supportersLink.addEventListener('click', renderSupporters);
 
     const contactLink = document.querySelector('.contact-link');
     contactLink.addEventListener('click', renderContact);

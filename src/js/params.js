@@ -4,6 +4,7 @@ import { renderGetInvolved } from "./get-involved";
 import renderIssues from "./issues";
 import renderVoting from "./voting";
 import renderContact from "./contact";
+import renderSupporters from "./supporters";
 
 const checkForParams = (clickedBack) => {
     const params = new URLSearchParams(location.search);
@@ -20,6 +21,8 @@ const checkForParams = (clickedBack) => {
         renderVoting(clickedBack);
     } else if (page === 'contact') {
         renderContact(clickedBack);
+    } else if (page === 'supporters') {
+        renderSupporters(clickedBack);
     } else {
         renderHome();
     }

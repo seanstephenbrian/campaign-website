@@ -15,6 +15,7 @@ import renderContact from './contact';
 import checkForParams from './params';
 import sendToFacebook from './fb';
 import sendToInsta from './insta';
+import renderSupporters from './supporters';
 
 (function addOgImageTags() {
     const head = document.querySelector('head');
@@ -72,6 +73,9 @@ import sendToInsta from './insta';
 
     const votingTab = document.querySelector('.voting-tab');
     votingTab.addEventListener('click', renderVoting);
+
+    const supportersTab = document.querySelector('.supporters-tab');
+    supportersTab.addEventListener('click', renderSupporters);
 
     const contactTab = document.querySelector('.contact-tab');
     contactTab.addEventListener('click', renderContact);
