@@ -675,6 +675,27 @@ th {
     margin-bottom: calc(1.5*var(--rvv));
 }
 
+/* supporters page: */
+
+.supporters-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.supporters-subheading {
+    max-width: 70%;
+}
+
+.supporters-list {
+    margin-top: calc(var(--rvv));
+}
+
+
+/* contact page */
+
 .email-john,
 .more-info {
     width: 100%;
@@ -752,7 +773,7 @@ footer .email-link {
 }
 
 /* desktop rules: */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
 
     nav {
         display: block;
