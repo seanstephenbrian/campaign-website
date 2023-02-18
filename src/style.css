@@ -437,6 +437,7 @@ p {
 }
 
 .issue-wrapper {
+    width: 100%;
     border: 1px solid var(--dark-blue);
     border-radius: 15px;
     background-color: var(--issue-bg);
@@ -450,6 +451,7 @@ p {
 
 .issue-heading {
     margin: calc(0.8*var(--rvv)) 0 calc(0.3*var(--rvv));
+    width: 100%;
 }
 
 .issues-list {
