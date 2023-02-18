@@ -137,6 +137,14 @@ body {
     display: none;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: 800;
+}
+
 header {
     background-color: var(--header-blue);
     height: var(--header-height);
