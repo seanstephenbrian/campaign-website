@@ -705,12 +705,20 @@ th {
     text-align: center;
 }
 
+.add-your-name {
+    font-size: calc(0.5*var(--rvv));
+}
+
 .supporters-subheading {
     max-width: 70%;
 }
 
 .supporters-list {
-    margin-top: calc(var(--rvv));
+    margin-top: calc(0.5*var(--rvv));
+}
+
+.supporter {
+    font-size: calc(0.7*var(--rvv));
 }
 
 
@@ -735,12 +743,14 @@ th {
     margin-top: -10px;
 }
 
-.johns-email-link {
+.johns-email-link,
+.add-your-name-button {
     text-decoration: none;
     color: var(--blue-text);
 }
 
-.johns-email-link:visited {
+.johns-email-link:visited,
+.add-your-name-button:visited {
     color: var(--blue-text);
 }
 

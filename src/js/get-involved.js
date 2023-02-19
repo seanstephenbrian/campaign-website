@@ -30,7 +30,7 @@ const renderGetInvolved = (clickedBack) => {
         } else {
             justRendered = false;
         }
-    })
+    });
 }
 
 function resizeForm() {
