@@ -367,14 +367,17 @@ main {
     margin: calc(0.4*var(--rvv)) 0 0;
 }
 
+.lush-link {
+    align-self: center;
+    width: 500px;
+    max-width: 80vw;
+    margin-bottom: calc(1*var(--rvv));
+}
+
 .event-flyer {
     border: 2px solid var(--blue-text);
     outline: 2px solid var(--flyer-orange);
-    align-self: center;
-    width: auto;
-    max-width: 80%;
-    max-height: 500px;
-    margin-bottom: calc(1*var(--rvv));
+    width: 100%;
 }
 
 .get-involved-container {
@@ -767,6 +770,7 @@ footer {
     text-align: center;
     margin-top: auto;
     padding: calc(1.2*var(--header-TB-padding));
+    padding-top: calc(1.6*var(--header-TB-padding));
     min-height: var(--footer-height);
     display: flex;
     flex-direction: column;
