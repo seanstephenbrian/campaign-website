@@ -48,6 +48,7 @@ const renderSupporters = (clickedBack) => {
         "Patrick Kendall",
         "Eric Krzysyofiak",
         "Pam Lagger",
+        "Mike & Carolyn Laughlin",
         "Mike & Marie Levy",
         "Susan & Roland Lieber",
         "Kevin D. Lubawski",

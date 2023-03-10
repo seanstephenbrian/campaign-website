@@ -367,7 +367,7 @@ main {
     margin: calc(0.4*var(--rvv)) 0 0;
 }
 
-.lush-link {
+.event-link {
     align-self: center;
     width: 500px;
     max-width: 80vw;
