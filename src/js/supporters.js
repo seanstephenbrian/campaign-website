@@ -40,6 +40,7 @@ const renderSupporters = (clickedBack) => {
         "Charlotte Grill",
         "Kathy Hardgrove",
         "Kristin Huzar",
+        "Simon Jackson",
         "Evan Jacover",
         "Alex & Lauren Janus",
         "Dan G. Javor",
