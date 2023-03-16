@@ -15,6 +15,7 @@ const renderSupporters = (clickedBack) => {
 
     // array of current supporters:
     const currentSupporters = [
+        "Marsha Barnett",
         "Kristen & Ethan Baron",
         "Svetlana Bekman",
         "Ira & Debrah Berger",
@@ -38,7 +39,7 @@ const renderSupporters = (clickedBack) => {
         "Mary & Paul Finnegan",
         "Roger Goldberg",
         "Charlotte Grill",
-        "Kathy Hardgrove",
+        "Kathy & Jim Hardgrove",
         "Kristin Huzar",
         "Simon Jackson",
         "Evan Jacover",
@@ -51,6 +52,7 @@ const renderSupporters = (clickedBack) => {
         "Lori & Peter Keenan",
         "Patrick Kendall",
         "Eric Krzysyofiak",
+        "Cissy Lacks",
         "Pam Lagger",
         "Mike & Carolyn Laughlin",
         "Mike & Marie Levy",
