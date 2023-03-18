@@ -130,7 +130,7 @@ body {
     display: flex;
     flex-direction: column;
     background: rgb(181,230,255);
-    background: radial-gradient(circle, rgba(181,230,255,0.8767123287671232) 0%, rgba(46,82,133,0.906392694063927) 100%, rgba(181,221,241,1) 100%);
+    background: radial-gradient(circle, rgba(181,230,255,0.8767123287671232) 0%, rgba(56, 98, 156, 0.834) 100%, rgba(181,221,241,1) 100%);
 }
 
 .hide {
@@ -721,7 +721,7 @@ th {
 }
 
 .supporter {
-    font-size: calc(0.7*var(--rvv));
+    font-size: calc(0.9*var(--rvv));
 }
 
 
