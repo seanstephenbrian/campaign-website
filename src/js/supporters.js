@@ -42,11 +42,13 @@ const renderSupporters = (clickedBack) => {
         "Charlotte Grill",
         "Hon. Steve Hagerty",
         "Kathy & Jim Hardgrove",
+        "Barb Hiller",
         "TJ Houren",
         "Kristin Huzar",
         "Simon Jackson",
         "Evan Jacover",
         "Alex & Lauren Janus",
+        "Myra Janus",
         "Dan G. Javor",
         "Ann & Tom Johnson",
         "Brian Johnson",
@@ -90,7 +92,8 @@ const renderSupporters = (clickedBack) => {
         "Hon. Liz Tisdahl",
         "William Wesenberg",
         "Randy & Emily Wexler",
-        "Ray & Mary Anne Wexler"
+        "Ray & Mary Anne Wexler",
+        "Hon. Cheryl Wollin"
     ];
 
     // method of rendering this array to the page:
