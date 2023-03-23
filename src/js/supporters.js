@@ -48,7 +48,7 @@ const renderSupporters = (clickedBack) => {
         "Kevin & Rachel Hanrahan",
         "Kathy & Jim Hardgrove",
         "Barb Hiller",
-        "Jane Corey Holt",
+        "Hon. Doug Holt & Jane Corey Holt",
         "TJ Houren",
         "Kristin Huzar",
         "Simon Jackson",
