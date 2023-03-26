@@ -17,9 +17,9 @@ const renderSupporters = (clickedBack) => {
     const currentSupporters = [
         "Hon. Candance Chow",
         "Hon. Steve Hagerty",
-        "Hon. Sharon Sheehan & Jeff Singleton",
         "Hon. Margaret Lurie & Paul Lurie",
         "Hon. Richard Rykhus & Carlos Briones",
+        "Hon. Sharon Sheehan & Jeff Singleton",
         "Hon. Larry Suffredin",
         "Hon. Thomas M. Suffredin",
         "Hon. Liz Tisdahl",
@@ -118,6 +118,7 @@ const renderSupporters = (clickedBack) => {
         "Mary Jo Schmitz",
         "Susan Sevcik",
         "Lindsay Shea",
+        "Donna Sokolowski",
         "Linda Stevens",
         "Michael Simon",
         "Tom & Lisa Stanton",
