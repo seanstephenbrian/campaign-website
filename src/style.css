@@ -518,19 +518,20 @@ p {
 }
 
 .caption {
-    margin-top: -5px;
     font-size: calc(0.4*var(--rvv));
     width: 85%;
     max-width: 870px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
+    margin-bottom: 15px;
 }
 
 .citation-link {
+    font-size: calc(0.6*var(--rvv));
     color: var(--dark-blue);
-    text-align: right;
-    text-decoration: none;
 }
 
 .citation-link:visited {
